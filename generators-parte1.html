@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <title>JavaScript</title>
+        <meta charset="utf-8">
+        
+        <script>
+
+            function* testeGenerator(){ // * impede da funçaõ avançar, avança apenas .next()
+                console.log("Teste 1");
+                yield console.log("Teste 2"); //mesmo com .next(), o yeld permite execultar sua linha e as anterioes sendo necessário .next()
+                console.log("Teste 3");
+
+                return "Teste"; //retorma um objeto
+            }
+
+            let meuGenerator = testeGenerator();
+
+            meuGenerator.next();
+            console.log("--------");
+            meuGenerator.next();
+
+        </script>
+    </head>
+
+    <body>
+        
+    </body>
+
+</html>
